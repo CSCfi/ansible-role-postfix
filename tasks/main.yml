@@ -1,0 +1,10 @@
+---
+# tasks file for ansible-role-postfix
+
+- name: set inet_protocols to ipv4
+  lineinfile: dest=/etc/postfix/main.cf line="inet_protocols = ipv4" 
+              backup=yes 
+              regexp="^inet_protocols = all"
+  when: postfix_ipv4_only
+  notify:
+    - reload postfix

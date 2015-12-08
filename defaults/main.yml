@@ -1,0 +1,5 @@
+---
+# defaults file for ansible-role-postfix
+
+# If this is True then set inet_protocols to ipv4
+postfix_ipv4_only: True
