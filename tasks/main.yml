@@ -14,7 +14,7 @@
   lineinfile: dest=/etc/postfix/main.cf 
               line="relayhost = {{ postfix_relayhost }}" 
               backup=yes 
-              regexp="^inet_protocols = .*"
+              regexp="^relayhost = .*"
   when: postfix_relayhost != "" 
   notify:
     - reload postfix
