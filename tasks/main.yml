@@ -9,3 +9,13 @@
   when: postfix_ipv4_only
   notify:
     - reload postfix
+
+- name: set relayhost
+  lineinfile: dest=/etc/postfix/main.cf 
+              line="relayhost = {{ postfix_relayhost }}" 
+              backup=yes 
+              regexp="^inet_protocols = .*"
+  when: postfix_relayhost != "" 
+  notify:
+    - reload postfix
+

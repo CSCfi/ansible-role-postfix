@@ -3,3 +3,5 @@
 
 # If this is True then set inet_protocols to ipv4
 postfix_ipv4_only: True
+# Set the relayhost to your local smtp server
+postfix_relayhost: ""
