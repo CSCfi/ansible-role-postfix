@@ -1,7 +1,7 @@
 ansible-role-postfix
 =========
 
-https://travis-ci.org/CSC-IT-Center-for-Science/ansible-role-postfix.svg?branch=master
+[![Build Status](https://travis-ci.org/CSC-IT-Center-for-Science/ansible-role-postfix.svg?branch=master)](https://travis-ci.org/CSC-IT-Center-for-Science/ansible-role-postfix)
 
 Sets :
  - inet_protocols to ipv4
