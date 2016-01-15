@@ -1,6 +1,8 @@
 ansible-role-postfix
 =========
 
+https://travis-ci.org/CSC-IT-Center-for-Science/ansible-role-postfix.svg?branch=master
+
 Sets :
  - inet_protocols to ipv4
  - relayhost to {{ postfix_relayhost }}
