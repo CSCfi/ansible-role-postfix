@@ -1,5 +1,11 @@
 ---
 # tasks file for ansible-role-postfix
+#
+- name: make sure postfix is installed
+  action: >
+    {{ ansible_pkg_mgr }}
+    name=postfix
+    state=installed
 
 - name: set inet_protocols to ipv4
   lineinfile: dest=/etc/postfix/main.cf 
