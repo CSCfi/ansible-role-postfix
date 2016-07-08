@@ -1,5 +1,5 @@
 ---
 # handlers file for ansible-role-postfix
 
-- name: reload postfix
+- name: restart postfix
   service: name=postfix state=restarted
