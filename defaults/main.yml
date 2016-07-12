@@ -3,5 +3,10 @@
 
 # If this is True then set inet_protocols to ipv4
 postfix_ipv4_only: True
+
 # Set the relayhost to your local smtp server
-postfix_relayhost: ""
+# postfix_relayhost: "smtp.example.org"
+
+# By default mydomain will be ansible_fqdn minus the host part. If you
+# want to override that, set it here.
+# postfix_mydomain: "example.org"

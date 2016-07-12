@@ -1,13 +1,12 @@
 ansible-role-postfix
-=========
+====================
 
 [![Build Status](https://travis-ci.org/CSC-IT-Center-for-Science/ansible-role-postfix.svg?branch=master)](https://travis-ci.org/CSC-IT-Center-for-Science/ansible-role-postfix)
 
-Sets :
- - inet_protocols to ipv4
- - relayhost to {{ postfix_relayhost }}
+This role configures postfix in a standard
+[null client](http://www.postfix.org/STANDARD_CONFIGURATION_README.html#null_client)
+mode.
 
-There are many other/better ansible-roles that configures postfix more completely. This role uses the defaults in EL7 and sets it to ipv4 only as well as configure a relayhost.
 
 Requirements
 ------------
