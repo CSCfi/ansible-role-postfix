@@ -1,4 +1,7 @@
 # {{ ansible_managed }}
+{% if postfix_custom_main is defined %}
+{{ postfix_main }}
+{% else %}
 myhostname = {{ ansible_fqdn }}
 {% if postfix_mydomain is defined %}
 mydomain = {{ postfix_mydomain }}
@@ -12,3 +15,4 @@ inet_protocols = ipv4
 {% endif %}
 inet_interfaces = loopback-only
 mydestination =
+{% endif %}
