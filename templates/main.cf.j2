@@ -1,6 +1,6 @@
 # {{ ansible_managed }}
 {% if postfix_custom_main is defined %}
-{{ postfix_main }}
+{{ postfix_custom_main }}
 {% else %}
 myhostname = {{ ansible_fqdn }}
 {% if postfix_mydomain is defined %}

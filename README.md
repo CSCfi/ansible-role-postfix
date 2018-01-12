@@ -7,6 +7,8 @@ This role configures postfix in a standard
 [null client](http://www.postfix.org/STANDARD_CONFIGURATION_README.html#null_client)
 mode.
 
+You can also override the configuration by defining postfix_custom_main variable. See defaults/main.yml for example.
+
 
 Requirements
 ------------
