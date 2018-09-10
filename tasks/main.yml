@@ -10,4 +10,9 @@
 
 - name: Start and enable postfix
   service: name=postfix state=started enabled=yes
+  when: ansible_connection != 'chroot'
+
+- name: Enable postfix for chroots
+  command: systemctl enable postfix
+  when: ansible_connection == 'chroot'
 
