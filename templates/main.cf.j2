@@ -6,7 +6,7 @@ myhostname = {{ ansible_fqdn }}
 {% if postfix_mydomain is defined %}
 mydomain = {{ postfix_mydomain }}
 {% endif %}
-myorigin = $mydomain
+myorigin = $myhostname
 {% if postfix_relayhost is defined %}
 relayhost = {{ postfix_relayhost }}
 {% endif %}
@@ -14,5 +14,5 @@ relayhost = {{ postfix_relayhost }}
 inet_protocols = ipv4
 {% endif %}
 inet_interfaces = loopback-only
-mydestination =
+mydestination = $myhostname, localhost.$mydomain, localhost
 {% endif %}
